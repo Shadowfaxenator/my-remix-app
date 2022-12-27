@@ -5,6 +5,7 @@ export const loader = async ({
   context,
   params,
 }) => {
+ // await context.KV.put("my","777")
 
  const p =  await context.KV.get("my")
   return {
