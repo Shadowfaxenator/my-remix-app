@@ -5,17 +5,20 @@ export const loader = async ({
   context,
   params,
 }) => {
-  return json(
-    await context.KV.get(`my`, {
-      type: "json",
-    })
-  );
+
+ const p =  await context.KV.get(`my`, {
+    type: "json",
+  })
+  return {
+    context
+  }
 };
 export default function Index() {
   const product = useLoaderData();
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       {product}
+      
     </div>
   );
 }
