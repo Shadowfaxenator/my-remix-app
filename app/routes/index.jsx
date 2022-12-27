@@ -6,11 +6,9 @@ export const loader = async ({
   params,
 }) => {
 
- const p =  await context.KV.get(`my`, {
-    type: "json",
-  })
+ const p =  await context.KV.get("my")
   return {
-    context
+    p
   }
 };
 export default function Index() {
