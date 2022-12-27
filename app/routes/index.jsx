@@ -12,10 +12,10 @@ export const loader = async ({
   }
 };
 export default function Index() {
-  const product = useLoaderData();
+  const {p} = useLoaderData();
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      {product}
+      {p}
       
     </div>
   );
